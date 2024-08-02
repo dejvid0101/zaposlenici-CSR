@@ -1,0 +1,36 @@
+.navbar {
+    padding: 0.5rem;
+    color: #e5e7eb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: linear-gradient(to right, #3B82F6, black);
+    
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-brand a {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+  }
+
+/* .navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+
+    .navbar-links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .navbar-actions .lang-btn:hover {
+      background-color: white;
+      color: #333;
+    }
+  } */
+  

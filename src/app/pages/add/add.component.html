@@ -1,0 +1,51 @@
+<div class="centered-div">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-group">
+      <label for="firstName">{{ 'TABLE.FIRST_NAME' | translate }}</label>
+      <div class="input-group">
+        <input id="firstName" formControlName="firstName" pInputText class="input-responsive">
+        <div *ngIf="firstNameCtrl.invalid && (firstNameCtrl.dirty || firstNameCtrl.touched)&&!firstNameCtrl.hasError('hasNumbers')" class="warning-message">
+          {{'FORM.FIRSTNAMEWARNING'|translate}}
+        </div>
+        <div *ngIf="firstNameCtrl.hasError('hasNumbers')" class="warning-message">
+          {{'FORM.NONUMBERSWARNING'|translate}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">{{ 'TABLE.LAST_NAME' | translate }}</label>
+      <div class="input-group">
+        <input id="lastName" formControlName="lastName" pInputText class="input-responsive">
+        <div *ngIf="lastNameCtrl.invalid && (lastNameCtrl.dirty || lastNameCtrl.touched)&&!lastNameCtrl.hasError('hasNumbers')" class="warning-message">
+          {{'FORM.LASTNAMEWARNING'|translate}}
+        </div>
+        <div *ngIf="lastNameCtrl.hasError('hasNumbers')" class="warning-message">
+          {{'FORM.NONUMBERSWARNING'|translate}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateOfBirth">{{ 'TABLE.DATE_OF_BIRTH' | translate }}</label>
+      <div class="input-group">
+        <p-calendar id="dateOfBirth" formControlName="dateOfBirth" dateFormat="yy-mm-dd" [maxDate]="maxDate"></p-calendar>
+        <div *ngIf="dateOfBirthCtrl.invalid && (dateOfBirthCtrl.dirty || dateOfBirthCtrl.touched)" class="warning-message">
+          {{'FORM.DATEOFBIRTHWARNING'|translate}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="jobTitle">{{ 'TABLE.JOB_TITLE' | translate }}</label>
+      <div class="input-group">
+        <p-dropdown id="jobTitle" formControlName="jobTitle" [options]="jobTitleOptions" [placeholder]="'FORM.SELECT'|translate"></p-dropdown>
+        <div *ngIf="jobTitleCtrl.invalid && (jobTitleCtrl.dirty || jobTitleCtrl.touched)" class="warning-message">
+          {{'FORM.JOBTITLEWARNING'|translate}}
+        </div>
+      </div>
+    </div>
+
+    <p-button type="submit" [label]="'FORM.SUBMIT'|translate" class="submit-btn btn btn-primary"></p-button>
+  </form>
+</div>

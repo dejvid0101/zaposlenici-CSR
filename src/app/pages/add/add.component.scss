@@ -1,0 +1,63 @@
+$margin-default: 25px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-div {
+  width: 50%; // Adjust the width as needed
+  max-width: 600px; // Set a max-width to limit the size
+  margin-top: $margin-default;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; // Center text inside the div if needed
+  background-color: #f8f9fa; // Optional: Add background color
+  padding: 20px; // Optional: Add padding
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Optional: Add a shadow
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: $margin-default;
+  margin-bottom: $margin-default;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+
+    input, p-calendar, p-dropdown {
+      margin-right: 10px;
+    }
+
+    .warning-message {
+      color: red;
+      font-size: 12px;
+    }
+  }
+}
+
+.submit-btn {
+  margin-top: $margin-default;
+}
+
+@media (max-width: 700px) {
+  .centered-div {
+    justify-content: flex-start;
+    margin-left: $margin-default;
+    margin-right: $margin-default;
+    width: auto;
+  }
+
+  .input-responsive{
+    width: 200px;
+  }
+}

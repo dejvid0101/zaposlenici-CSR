@@ -1,0 +1,17 @@
+<nav class="navbar" >
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <a href="/">Zaposlenici</a>
+      </div>
+      <div #langbtn class="navbar-actions">
+        
+        <p-toggleButton 
+        (click)="switchLanguage()"
+    onLabel="HR" 
+    offLabel="EN" />
+
+        </div>
+    </div>
+  </nav>
+  
+<router-outlet></router-outlet>

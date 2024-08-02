@@ -1,0 +1,23 @@
+<p-table class="tbl-employees mt-5" [value]="employees">
+  <ng-template pTemplate="header">
+    <tr>
+      <th></th>
+          <th>{{ 'TABLE.FIRST_NAME' | translate }}</th>
+          <th>{{ 'TABLE.LAST_NAME' | translate }}</th>
+          <th>{{ 'TABLE.DATE_OF_BIRTH' | translate }}</th>
+          <th>{{ 'TABLE.JOB_TITLE' | translate }}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-employee>
+    <tr>
+      <td>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="Stock Image">
+      </td>
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.dateOfBirth }}</td>
+      <td>{{ employee.jobTitle }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+

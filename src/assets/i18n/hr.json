@@ -1,0 +1,19 @@
+{
+    "TABLE": {
+      "IMAGE": "Slika",
+      "FIRST_NAME": "Ime",
+      "LAST_NAME": "Prezime",
+      "DATE_OF_BIRTH": "Datum rođenja",
+      "JOB_TITLE": "Radno mjesto"
+    },
+    "FORM": {
+      "SELECT": "Odaberi",
+      "SUBMIT": "Pošalji",
+      "FIRSTNAMEWARNING": "Ime je obavezno.",
+    "LASTNAMEWARNING": "Prezime je obavezno.",
+    "DATEOFBIRTHWARNING": "Datum rođenja je obavezan.",
+    "JOBTITLEWARNING": "Naziv radnog mjesta je obavezan.",
+    "NONUMBERSWARNING": "Brojevi nisu dopušteni."
+    }
+  }
+  

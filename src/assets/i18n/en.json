@@ -1,0 +1,18 @@
+{
+    "TABLE": {
+      "IMAGE": "Image",
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "DATE_OF_BIRTH": "Date of Birth",
+      "JOB_TITLE": "Job Title"
+    },
+    "FORM": {
+      "SELECT": "Select a job title",
+      "SUBMIT": "Submit",
+      "FIRSTNAMEWARNING": "First Name is required.",
+    "LASTNAMEWARNING": "Last Name is required.",
+    "DATEOFBIRTHWARNING": "Date of Birth is required.",
+    "JOBTITLEWARNING": "Job Title is required.",
+    "NONUMBERSWARNING": "Numbers are not allowed."
+    }
+  }
