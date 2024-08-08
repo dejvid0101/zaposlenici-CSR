@@ -1,4 +1,4 @@
-$margin-default: 25px;
+@import '../../styles/_variables';
 
 html, body {
   height: 100%;
@@ -9,15 +9,15 @@ html, body {
 }
 
 .centered-div {
-  width: 50%; // Adjust the width as needed
-  max-width: 600px; // Set a max-width to limit the size
+  width: 50%; 
+  max-width: 600px; 
   margin-top: $margin-default;
   margin-left: auto;
   margin-right: auto;
-  text-align: left; // Center text inside the div if needed
-  background-color: #f8f9fa; // Optional: Add background color
-  padding: 20px; // Optional: Add padding
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Optional: Add a shadow
+  text-align: left; 
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {

@@ -39,10 +39,18 @@ export class AddComponent {
   ];
 
   employeeForm: FormGroup;
-  firstNameCtrl: AbstractControl;
-  lastNameCtrl: AbstractControl;
-  dateOfBirthCtrl: AbstractControl;
-  jobTitleCtrl: AbstractControl;
+
+  // @ts-ignore
+  firstNameCtrl: FormControl;
+
+  // @ts-ignore
+  lastNameCtrl: FormControl;
+
+  // @ts-ignore
+  dateOfBirthCtrl: FormControl;
+
+  // @ts-ignore
+  jobTitleCtrl: FormControl;
 
   maxDate: Date = new Date();
 
@@ -50,10 +58,7 @@ export class AddComponent {
 
     this.employeeForm = formService.createEmployeeForm();
 
-    this.firstNameCtrl = this.employeeForm.get('firstName') || new FormControl()
-    this.lastNameCtrl = this.employeeForm.get('lastName') || new FormControl()
-    this.dateOfBirthCtrl = this.employeeForm.get('dateOfBirth') || new FormControl()
-    this.jobTitleCtrl = this.employeeForm.get('jobTitle') || new FormControl()
+    this.initForm();
 
   }
 
@@ -64,6 +69,13 @@ export class AddComponent {
     } else {
       this.employeeForm.markAllAsTouched(); // Trigger validation for all fields
     }
+  }
+
+  private initForm() {
+    this.firstNameCtrl = this.employeeForm.get('firstName') as FormControl || new FormControl();
+    this.lastNameCtrl = this.employeeForm.get('lastName') as FormControl || new FormControl();
+    this.dateOfBirthCtrl = this.employeeForm.get('dateOfBirth') as FormControl || new FormControl();
+    this.jobTitleCtrl = this.employeeForm.get('jobTitle') as FormControl || new FormControl();
   }
 
   ngOnInit() {

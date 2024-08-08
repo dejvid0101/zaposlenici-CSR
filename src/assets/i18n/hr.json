@@ -1,19 +1,27 @@
 {
-    "TABLE": {
-      "IMAGE": "Slika",
-      "FIRST_NAME": "Ime",
-      "LAST_NAME": "Prezime",
-      "DATE_OF_BIRTH": "Datum rođenja",
-      "JOB_TITLE": "Radno mjesto"
-    },
-    "FORM": {
-      "SELECT": "Odaberi",
-      "SUBMIT": "Pošalji",
-      "FIRSTNAMEWARNING": "Ime je obavezno.",
+  "NAVBAR": {
+    "EMPLOYEELIST": "Popis zaposlenika",
+    "ADDEMPLOYEE": "Novi zaposlenik"
+  },
+  "TABLE": {
+    "IMAGE": "Slika",
+    "FIRST_NAME": "Ime",
+    "LAST_NAME": "Prezime",
+    "DATE_OF_BIRTH": "Datum rođenja",
+    "JOB_TITLE": "Radno mjesto",
+    "NOT_FOUND": "Nema pronađenih zaposlenika",
+    "FILTER_BY_TITLE": "Filtriraj prema poziciji",
+    "CLEAR": "Poništi",
+    "FILTER_PLACEHOLDER": "Odaberi",
+    "SEARCH": "Pretraži"
+  },
+  "FORM": {
+    "SELECT": "Odaberi",
+    "SUBMIT": "Pošalji",
+    "FIRSTNAMEWARNING": "Ime je obavezno.",
     "LASTNAMEWARNING": "Prezime je obavezno.",
     "DATEOFBIRTHWARNING": "Datum rođenja je obavezan.",
     "JOBTITLEWARNING": "Naziv radnog mjesta je obavezan.",
-    "NONUMBERSWARNING": "Brojevi nisu dopušteni."
-    }
+    "LETTERSONLYSWARNING": "Dopuštena su samo slova."
   }
-  
+}

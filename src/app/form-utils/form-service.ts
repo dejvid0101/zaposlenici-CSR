@@ -9,18 +9,18 @@ export class FormService {
 
     createEmployeeForm(): FormGroup {
         return this.fb.group({
-            firstName: ['', [Validators.required, this.noNumbersValidator()]],
-            lastName: ['', [Validators.required, this.noNumbersValidator()]],
+            firstName: ['', [Validators.required, this.lettersOnlyValidator()]],
+            lastName: ['', [Validators.required, this.lettersOnlyValidator()]],
             dateOfBirth: ['', Validators.required],
             jobTitle: ['', Validators.required]
         });
     }
 
 
-    noNumbersValidator(): ValidatorFn {
+    lettersOnlyValidator(): ValidatorFn {
         return (control: AbstractControl): ValidationErrors | null => {
-            const hasNumbers = /\d/.test(control.value);
-            return hasNumbers ? { hasNumbers: true } : null;
+          const valid = /^[a-zA-ZčćžđšČĆŽĐŠ' -]*$/.test(control.value);
+          return valid ? null : { lettersOnly: true };
         };
     }
 }

@@ -1,9 +1,7 @@
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
-import { HomeComponent } from '../../pages/home/home.component';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { TranslateConfigModule } from '../../i18n-utils/translate-config.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule} from '@ngx-translate/core';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { LanguageService } from '../../i18n-utils/translate-service';
@@ -18,7 +16,7 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent{
-  constructor( private ls: LanguageService, private cd: ChangeDetectorRef) {
+  constructor( private ls: LanguageService) {
    }
 
    @ViewChild('langbtn') languageButton!: ElementRef;
@@ -26,7 +24,6 @@ export class LayoutComponent{
   switchLanguage() {
     const currentLanguage=this.languageButton.nativeElement.querySelector('.p-button-label').textContent.toLowerCase()
     const newLanguage = currentLanguage === 'en' ? 'hr' : 'en';
-    
     this.ls.switchLanguage(newLanguage)
   }
 

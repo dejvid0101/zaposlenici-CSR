@@ -1,18 +1,30 @@
 {
-    "TABLE": {
-      "IMAGE": "Image",
-      "FIRST_NAME": "First Name",
-      "LAST_NAME": "Last Name",
-      "DATE_OF_BIRTH": "Date of Birth",
-      "JOB_TITLE": "Job Title"
-    },
-    "FORM": {
-      "SELECT": "Select a job title",
-      "SUBMIT": "Submit",
-      "FIRSTNAMEWARNING": "First Name is required.",
-    "LASTNAMEWARNING": "Last Name is required.",
-    "DATEOFBIRTHWARNING": "Date of Birth is required.",
-    "JOBTITLEWARNING": "Job Title is required.",
-    "NONUMBERSWARNING": "Numbers are not allowed."
-    }
+  "NAVBAR": {
+    "EMPLOYEELIST": "Employees",
+    "ADDEMPLOYEE": "New"
+  },
+  "TABLE": {
+    "IMAGE": "Image",
+    "FIRST_NAME": "First name",
+    "LAST_NAME": "Last name",
+    "DATE_OF_BIRTH": "Date of birth",
+    "JOB_TITLE": "Job title",
+    "NOT_FOUND": "No employees found",
+    "FILTER_BY_TITLE": "Filter employees by title",
+    "CLEAR": "Clear",
+    "FILTER_PLACEHOLDER": "Choose title",
+    "SEARCH": "Search"
+  },
+  "FORM": {
+    "SELECT": "Select a job title",
+    "SUBMIT": "Submit",
+    "FIRSTNAMEWARNING": "First name is required.",
+    "LASTNAMEWARNING": "Last name is required.",
+    "DATEOFBIRTHWARNING": "Date of birth is required.",
+    "JOBTITLEWARNING": "Job title is required.",
+    "LETTERSONLYSWARNING": "Only letters are allowed."
+  },
+  "PRIMENG": {
+    "clear": "Clear"
   }
+}

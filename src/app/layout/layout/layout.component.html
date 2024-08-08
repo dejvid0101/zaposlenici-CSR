@@ -1,17 +1,33 @@
-<nav class="navbar" >
+<div class="page-container">
+  <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-brand">
         <a href="/">Zaposlenici</a>
       </div>
       <div #langbtn class="navbar-actions">
-        
-        <p-toggleButton 
-        (click)="switchLanguage()"
-    onLabel="HR" 
-    offLabel="EN" />
-
+        <div class="navbar-links">
+          <a routerLink="/home" routerLinkActive="active" class="nav-link">{{ 'NAVBAR.EMPLOYEELIST' | translate }}</a>
+          <a routerLink="/add" routerLinkActive="active" class="nav-link">{{ 'NAVBAR.ADDEMPLOYEE' | translate }}</a>
         </div>
+        <p-toggleButton 
+          (click)="switchLanguage()"
+          onLabel="HR"
+          offLabel="EN"
+        ></p-toggleButton>
+      </div>
     </div>
   </nav>
-  
-<router-outlet></router-outlet>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <span>&copy; 2024 Zaposlenici</span>
+      <div class="footer-links">
+        
+      </div>
+    </div>
+  </footer>
+</div>
